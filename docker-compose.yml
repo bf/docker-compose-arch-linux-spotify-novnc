@@ -1,0 +1,12 @@
+services:
+    spotify:
+        build:
+            context: .
+            dockerfile: spotify.Dockerfile
+        environment:
+          # PACKAGE_COMMAND: evince
+          # PACKAGE_NAME: evince
+          PACKAGE_COMMAND: spotify
+          PACKAGE_NAME: spotify
+        ports:
+            - "127.0.0.1:6080:6080"
